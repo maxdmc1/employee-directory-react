@@ -1,12 +1,7 @@
 import React from "react";
 import "./Header.css";
-import Button from "../button";
+// import Button from "../button";
 
 export default function Header() {
-  return (
-    <div className="header">
-      Employee Directory
-      <Button />
-    </div>
-  );
+  return <div className="header">Employee Directory</div>;
 }

@@ -1,23 +1,35 @@
 import React from "react";
 import "./table.css";
 
-export default function Table() {
+export default function Table(props) {
   return (
     <table className="table">
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Gender</th>
-        <th>E-Mail</th>
-        <th>Date of Birth</th>
-      </tr>
-      <tr>
-        <td>Marc</td>
-        <td>Rubio</td>
-        <td>male</td>
-        <td>marc.rubio@example.com</td>
-        <td>9/30/1945</td>
-      </tr>
+      <thead>
+        <tr>
+          <th>
+            <button onClick={() => props.sortBy("first")}>First Name</button>
+          </th>
+          <th>
+            <button onClick={() => props.sortBy("first")}>Last Name</button>
+          </th>
+          <th>Gender</th>
+          <th>E-Mail</th>
+          <th>
+            <button onClick={() => props.sortBy("age")}>Age</button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {props.data.map(row => (
+          <tr>
+            <td>{row.name.first}</td>
+            <td>{row.name.last}</td>
+            <td>{row.email}</td>
+            <td>{row.gender}</td>
+            <td>{row.dob.age}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 }
