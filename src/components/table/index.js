@@ -10,7 +10,7 @@ export default function Table(props) {
             <button onClick={() => props.sortBy("first")}>First Name</button>
           </th>
           <th>
-            <button onClick={() => props.sortBy("first")}>Last Name</button>
+            <button onClick={() => props.sortBy("last")}>Last Name</button>
           </th>
           <th>Gender</th>
           <th>E-Mail</th>
