@@ -21,12 +21,12 @@ export default function Table(props) {
       </thead>
       <tbody>
         {props.data.map(row => (
-          <tr>
-            <td>{row.name.first}</td>
-            <td>{row.name.last}</td>
+          <tr key="index">
+            <td>{row.first}</td>
+            <td>{row.last}</td>
             <td>{row.email}</td>
             <td>{row.gender}</td>
-            <td>{row.dob.age}</td>
+            <td>{row.age}</td>
           </tr>
         ))}
       </tbody>
